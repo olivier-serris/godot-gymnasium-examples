@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://slodmm3k3o20"]
+
+[ext_resource type="Script" uid="uid://c463by45xht0b" path="res://examples/reach_goal/DotAgent.cs" id="1"]
+
+[node name="Dot" type="Node2D" unique_id=1873228809]
+
+[node name="Agent" type="Node" parent="." unique_id=429476762]
+script = ExtResource("1")
+ActionRepeat = 4

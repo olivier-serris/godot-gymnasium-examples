@@ -1,0 +1,15 @@
+[project]
+name = "godot-gymnasium-examples"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "godot-gymnasium[sb3]",
+]
+
+[tool.uv.workspace]
+members = [
+    "godot/addons/godot_gymnasium",
+]
+
+[tool.uv.sources]
+godot-gymnasium = { workspace = true, editable = true }

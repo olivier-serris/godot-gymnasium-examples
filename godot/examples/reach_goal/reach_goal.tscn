@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cmk6m44e2sy7f"]
+
+[ext_resource type="Script" uid="uid://dl5l3ihwxkbls" path="res://examples/reach_goal/ReachGoalEnv.cs" id="1"]
+[ext_resource type="PackedScene" uid="uid://slodmm3k3o20" path="res://examples/reach_goal/dot.tscn" id="2"]
+[ext_resource type="Script" uid="uid://c0kqilnq57h7w" path="res://examples/reach_goal/KeyboardController.cs" id="3"]
+
+[node name="ReachGoalEnv" type="Node" unique_id=1868742367 node_paths=PackedStringArray("Agent")]
+script = ExtResource("1")
+Agent = NodePath("Canvas/Dot/Agent")
+MaxEpisodeSteps = 100
+
+[node name="Canvas" type="Node2D" parent="." unique_id=880208326]
+
+[node name="Dot" parent="Canvas" unique_id=633677806 instance=ExtResource("2")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1790475968]
+
+[node name="KeyboardController" type="Node" parent="." unique_id=1540462045 node_paths=PackedStringArray("Agent")]
+script = ExtResource("3")
+Agent = NodePath("../Canvas/Dot/Agent")
